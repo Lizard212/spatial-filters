@@ -34,6 +34,27 @@ namespace SpartialFilters
             return arrGray;
 
         }
+
+        public static Bitmap ColorToGray(Bitmap image)
+        {
+            Color c;
+            Bitmap grayImage = (Bitmap)image.Clone();
+            int width = image.Width;
+            int height = image.Height;
+            int[,] arrGray = new int[width, height];
+
+            /* Convert color image to gray image */
+            for (int w = 0; w < width; w++)
+            {
+                for (int h = 0; h < height; h++)
+                {
+                    c = image.GetPixel(w, h);
+                    byte gray = (byte)(.333 * c.R + .333 * c.G + .333 * c.B);
+                    grayImage.SetPixel(w, h, Color.FromArgb(gray, gray, gray));
+                }
+            }
+            return grayImage;
+        }
         public  void ResizeArray<T>(
             ref T[,] array, int padLeft, int padRight, int padTop, int padBottom)
         {

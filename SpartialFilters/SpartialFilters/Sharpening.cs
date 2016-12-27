@@ -29,7 +29,7 @@ namespace SpartialFilters
             filter[0, 0] = filter[0, 1] = filter[0, 2] = filter[1, 0] = filter[1, 2] = filter[2, 0] = filter[2, 1] = filter[2, 2] = 1;
             filter[1, 1] = - 8;
 
-            double bias = 1.5;
+            double bias = 1.0;
             Common common = new Common();
             arrGray = common.ConvertToGray(sharpenImage);
             for ( i = 1; i < width -1; i++)
