@@ -73,7 +73,7 @@
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <LinkIncremental>true</LinkIncremental>
+    <LinkIncremental>false</LinkIncremental>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -99,7 +99,7 @@
     <ClCompile>
       <PrecompiledHeader>
       </PrecompiledHeader>
-      <WarningLevel>Level3</WarningLevel>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
@@ -149,7 +149,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\..\..\Downloads\nlmeansC\nlmeansC\img_diff_ipol.cpp" />
+    <ClCompile Include="..\..\..\..\..\Downloads\nlmeansC\nlmeansC\img_mse_ipol.cpp" />
+    <ClCompile Include="..\..\..\..\..\Downloads\nlmeansC\nlmeansC\io_png.c" />
+    <ClCompile Include="..\..\..\..\..\Downloads\nlmeansC\nlmeansC\libauxiliar.cpp" />
+    <ClCompile Include="..\..\..\..\..\Downloads\nlmeansC\nlmeansC\libdenoising.cpp" />
+    <ClCompile Include="..\..\..\..\..\Downloads\nlmeansC\nlmeansC\mt19937ar.c" />
+    <ClCompile Include="..\..\..\..\..\Downloads\nlmeansC\nlmeansC\nlmeans_ipol.cpp" />
     <ClCompile Include="Source.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\..\..\Downloads\nlmeansC\nlmeansC\io_png.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\nlmeansC\nlmeansC\libauxiliar.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\nlmeansC\nlmeansC\libdenoising.h" />
+    <ClInclude Include="..\..\..\..\..\Downloads\nlmeansC\nlmeansC\mt19937ar.h" />
+    <ClInclude Include="png.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Makefile" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -48,9 +48,9 @@ namespace SpartialFilters
                 Image img = Image.FromFile(filePath);
                 Bitmap bmp = new Bitmap(img);
 
-                Bitmap bmpOutput = bmp;
-                Smoothing.Smooth(bmp, bmpOutput, 3);
-                pictureBox2.Image = bmpOutput;
+               
+               
+                pictureBox2.Image = Smoothing.Smooth(bmp, 3);
             }
            
         }
