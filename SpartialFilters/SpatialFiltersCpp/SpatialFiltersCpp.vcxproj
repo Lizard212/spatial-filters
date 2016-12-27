@@ -149,7 +149,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="libauxiliar.cpp" />
+    <ClCompile Include="libdenoising.cpp" />
+    <ClCompile Include="nlmeans.cpp" />
     <ClCompile Include="Source.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="iio.h" />
+    <ClInclude Include="libauxiliar.h" />
+    <ClInclude Include="libdenoising.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

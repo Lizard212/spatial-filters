@@ -43,16 +43,32 @@ namespace SpartialFilters
             {
                 Image img = Image.FromFile(filePath);
                 Bitmap bmp = new Bitmap(img);
-                Smoothing smoothing = new Smoothing();
+
                 Bitmap bmpOutput = bmp;
                      
      
-                smoothing.Smooth(bmp, bmpOutput, 10);
+                Smoothing.Smooth(bmp, bmpOutput, 10);
                 pictureBox2.Image = bmpOutput;
             }
            
         }
 
-       
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            if (filePath != null)
+            {
+                Image img = Image.FromFile(filePath);
+                Bitmap bmp = new Bitmap(img);
+
+                Bitmap bmpOutput = bmp;
+
+
+                Sharpening.Sharpen(bmp, bmpOutput);
+
+
+                pictureBox2.Image = bmpOutput;
+            }
+        }
     }
 }
